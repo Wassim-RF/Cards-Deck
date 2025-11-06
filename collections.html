@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CardDeck</title>
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/output.css">
+    <link rel="stylesheet" href="assets/style/phone.css">
+</head>
+<body class="w-full flex flex-col items-center justify-center bg-[#F6F6F8]">
+    <div class="w-[80%] min-h-screen flex flex-col gap-5" id="pageContent">
+        <header class="flex items-center h-24 w-full justify-between border-b border-b-[#c0c0c0] shadow-xs p-0 m-0 pl-5 pr-5">
+            <div class="flex items-center gap-2">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect width="48" height="48" fill="url(#pattern0_6_14)"/><defs><pattern id="pattern0_6_14" patternContentUnits="objectBoundingBox" width="1" height="1"><use xlink:href="#image0_6_14" transform="scale(0.0208333)"/></pattern><image id="image0_6_14" width="48" height="48" preserveAspectRatio="none" xlink:href="data:image/png;base64,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"/></defs></svg>
+                <p class="text-2xl font-medium text-[#135BEC]" id="logoName">CardDeck</p>
+            </div>
+            <div class="flex gap-8">
+                <nav class="flex gap-5">
+                    <a href="index.html" class="w-20 h-7 bg-[#d9d9d9] flex justify-center items-center rounded-[7px] font-medium hover:bg-[#c4c2c2]">Home</a>
+                    <a href="collections.html" class="w-20 h-7 flex justify-center items-center rounded-[7px] font-medium hover:bg-[#f0efef]">Collection</a>
+                    <a href="quiz.html" class="w-20 h-7 flex justify-center items-center rounded-[7px] font-medium hover:bg-[#f0efef]">Quiz</a>
+                </nav>
+                <button class="bg-[#d9d9d9] rounded-full w-7 h-7 flex justify-center items-center cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20"><path fill="#000000" fill-rule="evenodd" d="M8.764 6.128a4.506 4.506 0 0 1 2.6-3.196c.93-.41.727-1.784-.281-1.908C6.47.458 2.162 3.522 1.188 8.102c-1.035 4.87 2.067 9.656 6.93 10.69c4.862 1.033 9.642-2.078 10.677-6.947a9.045 9.045 0 0 0 .195-2.166c-.032-1.019-1.388-1.343-1.877-.449a4.504 4.504 0 0 1-4.885 2.245a4.505 4.505 0 0 1-3.464-5.347Zm-.23 10.707c-3.782-.803-6.195-4.527-5.39-8.317a7.022 7.022 0 0 1 4.727-5.23a6.512 6.512 0 0 0-1.063 2.424c-.747 3.516 1.493 6.973 5.005 7.72a6.487 6.487 0 0 0 4.636-.752c-1.273 3.053-4.57 4.867-7.916 4.155Z" clip-rule="evenodd"/></svg>
+                </button>
+            </div>
+        </header>
+        
+        <main class="min-h-screen">
+            <header class="border-b border-b-[#c0c0c0] flex flex-col gap-8 pb-5 mt-2 w-full">
+                <h1 class="text-4xl font-semibold">Collection :</h1>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-x-5 w-1/3 border border-[#c0c0c0] h-14 rounded-3xl pl-5 pr-3 shadow-[2px_2px_5px_#c0c0c0]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20"><path fill="#c0c0c0" d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33l-1.42 1.42l-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"/></svg>
+                        <input type="search" placeholder="Chercher une collection..." class="outline-0 h-1/2 w-full" id="Search_collection--Input">
+                    </div>
+                    <button class="bg-[#135BEC] hover:bg-[#1253D7] h-10 text-white text-xl font-medium p-1.5 rounded-xl cursor-pointer" id="Create_collection--Buton">Create Collection</button>
+                </div>
+            </header>
+            <section id="Collection_See--section" class="flex justify-center">
+                <div class="grid grid-cols-4 grid-rows-2 w-[90%] gap-5 mt-5">
+                    <a href="#" class="w-full h-[310px] bg-[#F0F0F2] border border-[#c0c0c0] rounded-2xl">
+                        <div>
+                            <div class="w-full flex justify-center items-center mt-1.5">
+                                <img src="image.png" class="w-[90%]">
+                            </div>
+                            <div class="ml-2.5 mt-2.5">
+                                <h1 class="text-xl font-medium">HTML</h1>
+                                <p class="text-xs mt-1 mb-1 w-full whitespace-normal wrap-break-word">A collection for learn the tags of html .</p>
+                                <p class="w-1/3 bg-[#c0c0c0] text-center rounded-3xl mt-2">10 cards</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="flex items-center h-24 w-full flex-col gap-1.5 border-t justify-center border-t-[#c0c0c0]">
+            <div class="flex justify-center items-center text-xl gap-20">
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy policy</a>
+                <a href="#">Teams of services</a>
+            </div>
+            <p>© 2025 CardDeck . All rights reserved</p>
+        </footer>
+    </div>
+
+    <div class="w-[80%] min-h-screen bg-[#F0F0F2] pt-5 pb-5 absolute z-50  top-[12%] p-0 m-0 hidden" id="Create_collection--Form">
+        <header class="flex flex-col ml-1.5 gap-2 justify-start">
+            <button class="cursor-pointer text-[#135BEC] font-medium text-start hover:underline" id="retour_create_collectiom--button">< Retour :</button>
+            <h1 class="text-2xl font-semibold ml-3">Create collection :</h1>
+        </header>
+        <div class="w-full flex justify-center items-center mt-2">
+            <div class="w-[85%] flex flex-col justify-center items-center bg-[#D9D9D9] rounded-xl">
+                <form class="w-[95%] flex flex-col justify-center items-center mt-3 gap-7">
+                    <label class="w-full h-[300px] text-center flex justify-center items-center flex-col bg-white rounded-2xl" id="drop_erea">
+                        <input type="file" name="upload_Images" accept="image/*" id="upload_Images" hidden>
+                        <div class="flex flex-col justify-center items-center w-full h-full rounded-2xl border-black border border-dashed ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="#c0c0c0" d="M23 4v2h-3v3h-2V6h-3V4h3V1h2v3h3zm-8.5 7a1.5 1.5 0 1 0-.001-3.001A1.5 1.5 0 0 0 14.5 11zm3.5 3.234l-.513-.57a2 2 0 0 0-2.976 0l-.656.731L9 9l-3 3.333V6h7V4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7h-2v3.234z"/></svg>
+                            <p class="text-[#c0c0c0] mb-2.5">Glissez-déposez vos images ici ou cliquez pour importer</p>
+                            <span class="text-[#c0c0c0]">Ajoutez vos photos ici</span>
+                        </div>
+                    </label>
+
+                    <div class="flex flex-col w-full gap-3">
+                        <label for="Collection_Name" class="text-xl font-semibold">Nom du collection :</label>
+                        <div class="w-full flex justify-between items-center border border-[#c0c0c0] h-14 pl-2.5 pr-2.5 rounded-3xl bg-white">
+                            <input type="text" placeholder="Entrer un nom pour la collection..." min="6" max="32" id="Collection_Name" name="Collection_Name" class="w-[90%] h-1/2 outline-0">
+                            <p class="mt-5 text-xs text-[#c0c0c0] font-medium">0/100</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-row w-full justify-between ">
+                        <div class="w-[45%] flex flex-col items-start justify-start text-start gap-2.5">
+                            <label for="Collection_category" class="text-xl font-semibold">Category du collection :</label>
+                            <select name="Collection_category" id="Collection_category" class="w-full flex justify-between items-center border border-[#c0c0c0] h-14 pl-2.5 pr-2.5 rounded-2xl bg-white outline-0">
+                                <option>Selecte la category de votre collection</option>
+                                <option>Developement</option>
+                                <option>Languages</option>
+                                <option>Science</option>
+                            </select>
+                        </div>
+                        <div class="w-[45%] flex flex-col items-start justify-start text-start gap-2.5">
+                            <label for="Collection_langue" class="text-xl font-semibold">Langue du collection :</label>
+                            <select name="Collection_langue" id="Collection_langue" class="w-full flex justify-between items-center border border-[#c0c0c0] h-14 pl-2.5 pr-2.5 rounded-2xl bg-white outline-0">
+                                <option>Selecte la langue du votre collection</option>
+                                <option>Arabic</option>
+                                <option>French</option>
+                                <option>Anglai</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="flex flex-col w-full gap-3">
+                        <label for="Description_collection" class="text-xl font-semibold">Description du collection :</label>
+                        <textarea name="Description_collection" id="Description_collection" placeholder="Entrer la description du collection..." class="w-full h-[200px] bg-white p-2.5 rounded-2xl"></textarea>
+                    </div>
+                    <input type="submit" class="bg-[#135BEC] hover:bg-[#1253D7] rounded-[10px] w-1/12 h-7 text-white cursor-pointer mb-2.5">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/create_collection-card.js"></script>
+</body>
+</html>
