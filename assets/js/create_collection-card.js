@@ -26,7 +26,6 @@ const saveCollectionButton = document.getElementById("save_collection--Button");
 let collectionNumber = 0 ;
 
 function uploadImage() {
-    const upload_image_cover = document.getElementById("upload_image_cover");
     let imgLink = URL.createObjectURL(CollectionImagesUpload.files[0]);
     return imgLink;
 }
@@ -35,9 +34,9 @@ CollectionImagesUpload.addEventListener("input" , uploadImage);
 
 
 saveCollectionButton.addEventListener("click" , (e) => {
-    e.preventDefault();
+    e.preventDefault(); // m reloadich page
 
-
+    // creation dyal link dkol collection
     const collectionLinks = document.createElement("a");
     collectionLinks.classList.add("w-full" , "h-[310px]" , "border" , "border-[#c0c0c0]" ,  "rounded-2xl" , "shadow-[1px_1px_4px_#c0c0c0]" , "hover:scale-[1.02]" , "cursor-pointer");
     collectionLinks.setAttribute("href" , "oneCollection.html");
@@ -75,18 +74,6 @@ saveCollectionButton.addEventListener("click" , (e) => {
     cardsNumber.textContent = collectionNumber + " cards";
     collectionDivText.appendChild(cardsNumber);
     collectionNumber++;
-
-
-    fetch("/data/collection/collections.json").then(response => response.json()).then(data => {
-        data.collection.push({
-            id : CollectionNameUpload.value.toLowerCase(),
-            title : CollectionNameUpload.value,
-            card : []
-        });
-    });
-
-
-
 
     CollectionNameUpload.value = "";
     CollectionDescriptionUpload.value = "";
