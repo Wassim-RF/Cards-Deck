@@ -17,8 +17,8 @@
             </div>
             <div class="flex gap-8">
                 <nav class="flex gap-5">
-                    <a href="index.html" class="w-20 h-7 bg-[#d9d9d9] flex justify-center items-center rounded-[7px] font-medium hover:bg-[#c4c2c2]">Home</a>
-                    <a href="collections.html" class="w-20 h-7 flex justify-center items-center rounded-[7px] font-medium hover:bg-[#f0efef]">Collection</a>
+                    <a href="index.html" class="w-20 h-7  flex justify-center items-center rounded-[7px] font-medium hover:bg-[#f0efef]">Home</a>
+                    <a href="collections.html" class="w-20 h-7 bg-[#d9d9d9] flex justify-center items-center rounded-[7px] font-medium hover:bg-[#c4c2c2]">Collection</a>
                     <a href="quiz.html" class="w-20 h-7 flex justify-center items-center rounded-[7px] font-medium hover:bg-[#f0efef]">Quiz</a>
                 </nav>
                 <button class="bg-[#d9d9d9] rounded-full w-7 h-7 flex justify-center items-center cursor-pointer">
@@ -39,19 +39,7 @@
                 </div>
             </header>
             <section id="Collection_See--section" class="flex justify-center">
-                <div class="grid grid-cols-4 grid-rows-2 w-[90%] gap-5 mt-5">
-                    <a href="#" class="w-full h-[310px] bg-[#F0F0F2] border border-[#c0c0c0] rounded-2xl">
-                        <div>
-                            <div class="w-full flex justify-center items-center mt-1.5">
-                                <img src="image.png" class="w-[90%]">
-                            </div>
-                            <div class="ml-2.5 mt-2.5">
-                                <h1 class="text-xl font-medium">HTML</h1>
-                                <p class="text-xs mt-1 mb-1 w-full whitespace-normal wrap-break-word">A collection for learn the tags of html .</p>
-                                <p class="w-1/3 bg-[#c0c0c0] text-center rounded-3xl mt-2">10 cards</p>
-                            </div>
-                        </div>
-                    </a>
+                <div class="grid grid-cols-4 grid-rows-2 w-[90%] gap-5 mt-5" id="Collection_div--container">
                 </div>
             </section>
         </main>
@@ -76,8 +64,8 @@
             <div class="w-[85%] flex flex-col justify-center items-center bg-[#D9D9D9] rounded-xl">
                 <form class="w-[95%] flex flex-col justify-center items-center mt-3 gap-7">
                     <label class="w-full h-[300px] text-center flex justify-center items-center flex-col bg-white rounded-2xl" id="drop_erea">
-                        <input type="file" name="upload_Images" accept="image/*" id="upload_Images" hidden>
-                        <div class="flex flex-col justify-center items-center w-full h-full rounded-2xl border-black border border-dashed ">
+                        <input type="file" name="upload_Images" accept="image/*" id="Collection_images" hidden required>
+                        <div class="flex flex-col justify-center items-center w-full h-full rounded-2xl border-black border border-dashed " id="upload_image_cover">
                             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="#c0c0c0" d="M23 4v2h-3v3h-2V6h-3V4h3V1h2v3h3zm-8.5 7a1.5 1.5 0 1 0-.001-3.001A1.5 1.5 0 0 0 14.5 11zm3.5 3.234l-.513-.57a2 2 0 0 0-2.976 0l-.656.731L9 9l-3 3.333V6h7V4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7h-2v3.234z"/></svg>
                             <p class="text-[#c0c0c0] mb-2.5">Glissez-déposez vos images ici ou cliquez pour importer</p>
                             <span class="text-[#c0c0c0]">Ajoutez vos photos ici</span>
@@ -87,8 +75,8 @@
                     <div class="flex flex-col w-full gap-3">
                         <label for="Collection_Name" class="text-xl font-semibold">Nom du collection :</label>
                         <div class="w-full flex justify-between items-center border border-[#c0c0c0] h-14 pl-2.5 pr-2.5 rounded-3xl bg-white">
-                            <input type="text" placeholder="Entrer un nom pour la collection..." min="6" max="32" id="Collection_Name" name="Collection_Name" class="w-[90%] h-1/2 outline-0">
-                            <p class="mt-5 text-xs text-[#c0c0c0] font-medium">0/100</p>
+                            <input type="text" placeholder="Entrer un nom pour la collection..." minlength="6" maxlength="32" id="Collection_Name" name="Collection_Name" class="w-[90%] h-1/2 outline-0" required>
+                            <p class="mt-5 text-xs text-[#c0c0c0] font-medium" id="collection_number--words"></p>
                         </div>
                     </div>
                     <div class="flex flex-row w-full justify-between ">
@@ -113,9 +101,9 @@
                     </div>
                     <div class="flex flex-col w-full gap-3">
                         <label for="Description_collection" class="text-xl font-semibold">Description du collection :</label>
-                        <textarea name="Description_collection" id="Description_collection" placeholder="Entrer la description du collection..." class="w-full h-[200px] bg-white p-2.5 rounded-2xl"></textarea>
+                        <textarea name="Description_collection" id="Collection_description" placeholder="Entrer la description du collection..." class="w-full h-[200px] bg-white p-2.5 rounded-2xl"></textarea>
                     </div>
-                    <input type="submit" class="bg-[#135BEC] hover:bg-[#1253D7] rounded-[10px] w-1/12 h-7 text-white cursor-pointer mb-2.5">
+                    <button class="bg-[#135BEC] hover:bg-[#1253D7] rounded-[10px] w-1/12 h-7 text-white cursor-pointer mb-2.5" id="save_collection--Button">Save</button>
                 </form>
             </div>
         </div>
