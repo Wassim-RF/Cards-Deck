@@ -40,6 +40,20 @@
             </header>
             <section id="Collection_See--section" class="flex justify-center">
                 <div class="grid grid-cols-4 grid-rows-2 w-[90%] gap-5 mt-5" id="Collection_div--container">
+                    <!-- <a href="oneCollection.html" class="w-full h-[120px] p-1.5 border border-[#c0c0c0] rounded-2xl shadow-[1px_1px_4px_#c0c0c0] hover:scale-[1.02] cursor-pointer">
+                        <div class="flex justify-between items-center">
+                            <h1 class="text-2xl font-medium">HTML</h1>
+                            <p class="text-[20px]">...</p>
+                        </div>
+                        <p class="text-xs mt-1 mb-1 w-full whitespace-normal wrap-break-word">A collection for learn the tags of html</p>
+                        <div class="flex justify-between items-center">
+                            <p class="w-1/3 bg-[#c0c0c0] text-center rounded-3xl mt-2">0 Cards</p>
+                            <div class="flex justify-center items-center gap-1 mt-auto">
+                                <p class="border-2 p-0.5 border-[#135bec] text-[#135bec] text-[12px] rounded-md">Programming</p>
+                                <p class="border-2 p-0.5 border-[#135bec] text-[#135bec] text-[12px] rounded-md">Arabe</p>
+                            </div>
+                        </div>
+                    </a> -->
                 </div>
             </section>
         </main>
@@ -56,26 +70,18 @@
     </div>
 
     <div class="w-[80%] min-h-screen bg-[#F0F0F2] pt-5 pb-5 absolute z-50  top-[12%] p-0 m-0 hidden" id="Create_collection--Form">
-        <header class="flex flex-col ml-1.5 gap-2 justify-start">
+        <header class="flex flex-col ml-1.5 gap-3 justify-start">
             <button class="cursor-pointer text-[#135BEC] font-medium text-start hover:underline" id="retour_create_collectiom--button">< Retour :</button>
             <h1 class="text-2xl font-semibold ml-3">Create collection :</h1>
         </header>
-        <div class="w-full flex justify-center items-center mt-2">
+        <div class="w-full flex justify-center items-center mt-5 mb-5">
             <div class="w-[85%] flex flex-col justify-center items-center bg-[#D9D9D9] rounded-xl">
                 <form class="w-[95%] flex flex-col justify-center items-center mt-3 gap-7">
-                    <label class="w-full h-[300px] text-center flex justify-center items-center flex-col bg-white rounded-2xl" id="drop_erea">
-                        <input type="file" name="upload_Images" accept="image/*" id="Collection_images" hidden required>
-                        <div class="flex flex-col justify-center items-center w-full h-full rounded-2xl border-black border border-dashed " id="upload_image_cover">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="#c0c0c0" d="M23 4v2h-3v3h-2V6h-3V4h3V1h2v3h3zm-8.5 7a1.5 1.5 0 1 0-.001-3.001A1.5 1.5 0 0 0 14.5 11zm3.5 3.234l-.513-.57a2 2 0 0 0-2.976 0l-.656.731L9 9l-3 3.333V6h7V4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7h-2v3.234z"/></svg>
-                            <p class="text-[#c0c0c0] mb-2.5">Glissez-déposez vos images ici ou cliquez pour importer</p>
-                            <span class="text-[#c0c0c0]">Ajoutez vos photos ici</span>
-                        </div>
-                    </label>
 
                     <div class="flex flex-col w-full gap-3">
                         <label for="Collection_Name" class="text-xl font-semibold">Nom du collection :</label>
                         <div class="w-full flex justify-between items-center border border-[#c0c0c0] h-14 pl-2.5 pr-2.5 rounded-3xl bg-white">
-                            <input type="text" placeholder="Entrer un nom pour la collection..." minlength="6" maxlength="32" id="Collection_Name" name="Collection_Name" class="w-[90%] h-1/2 outline-0" required>
+                            <input type="text" placeholder="Entrer un nom pour la collection..." minlength="4" maxlength="32" id="Collection_Name" name="Collection_Name" class="w-[90%] h-1/2 outline-0" required>
                             <p class="mt-5 text-xs text-[#c0c0c0] font-medium" id="collection_number--words"></p>
                         </div>
                     </div>
@@ -101,7 +107,7 @@
                     </div>
                     <div class="flex flex-col w-full gap-3">
                         <label for="Description_collection" class="text-xl font-semibold">Description du collection :</label>
-                        <textarea name="Description_collection" id="Collection_description" placeholder="Entrer la description du collection..." class="w-full h-[200px] bg-white p-2.5 rounded-2xl"></textarea>
+                        <textarea name="Description_collection" id="Collection_description" placeholder="Entrer la description du collection..." class="w-full h-[200px] bg-white p-2.5 rounded-2xl" minlength="4" maxlength="100"></textarea>
                     </div>
                     <button class="bg-[#135BEC] hover:bg-[#1253D7] rounded-[10px] w-1/12 h-7 text-white cursor-pointer mb-2.5" id="save_collection--Button">Save</button>
                 </form>
