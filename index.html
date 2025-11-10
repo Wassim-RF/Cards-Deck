@@ -10,13 +10,13 @@
 </head>
 <body class="w-full flex justify-center bg-[#F6F6F8]">
     <div class="w-[80%] min-h-screen flex flex-col gap-5">
-        <header class="flex items-center h-24 w-full justify-between border-b border-b-[#c0c0c0] shadow-xs p-0 m-0 pl-5 pr-5">
+        <header class="flex items-center h-24 w-full justify-between border-b border-b-[#c0c0c0] shadow-xs p-0 m-0 pl-5 pr-5" id="navBar_header">
             <div class="flex items-center gap-2">
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect width="48" height="48" fill="url(#pattern0_6_14)"/><defs><pattern id="pattern0_6_14" patternContentUnits="objectBoundingBox" width="1" height="1"><use xlink:href="#image0_6_14" transform="scale(0.0208333)"/></pattern><image id="image0_6_14" width="48" height="48" preserveAspectRatio="none" xlink:href="data:image/png;base64,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"/></defs></svg>
                 <p class="text-2xl font-medium text-[#135BEC]" id="logoName">CardDeck</p>
             </div>
             <div class="flex gap-8">
-                <nav class="flex gap-5">
+                <nav class="flex gap-5 items-center">
                     <a href="index.html" class="w-20 h-7 bg-[#d9d9d9] flex justify-center items-center rounded-[7px] font-medium hover:bg-[#c4c2c2]">Home</a>
                     <a href="collections.html" class="w-20 h-7 flex justify-center items-center rounded-[7px] font-medium hover:bg-[#f0efef]">Collection</a>
                     <a href="quiz.html" class="w-20 h-7 flex justify-center items-center rounded-[7px] font-medium hover:bg-[#f0efef]">Quiz</a>
@@ -28,21 +28,19 @@
         </header>
         <main class="bg-[#F6F6F8] flex flex-col items-center h-full justify-center text-center gap-7">
             <div>
-                <h1 class="text-4xl h-24 font-bold text-black">Apprends, révise, progresse<br>une carte à la fois</h1>
-                <p class="text-sm sm:text-base text-gray-600 mt-3 max-w-xl">Welcome to CardDeck, apprends autrement, crée tes propres flashcards, révise à ton rythme et découvre une façon simple et amusante de retenir tes leçon
-                </p>
+                <h1 class="text-4xl h-24 font-bold text-black ARPCardF">Apprends, révise, progresse<br>une carte à la fois</h1>
+                <div class="flex justify-between items-center">
+                    <a href="collections.html"><button class="bg-[#135BEC] hover:bg-[#1253D7] text-white text-xl rounded-md font-semibold shadow w-[135px] h-10 cursor-pointer">Flashcards</button></a>
+                    <a href="quiz.html"><button class="bg-[#F5A623] hover:bg-[#D58E1A] text-white text-xl rounded-md font-semibold shadow w-[135px] h-10  cursor-pointer">Quiz</button></a>
+                </div>
             </div>
-            <div class="flex gap-10 mt-6 w-full justify-center items-center">
-                <a href="collections.html"><button class="bg-[#135BEC] hover:bg-[#1253D7] text-white text-xl rounded-md font-semibold shadow w-[135px] h-10 cursor-pointer">Flashcards</button></a>
-                <a href="quiz.html"><button class="bg-[#F5A623] hover:bg-[#D58E1A] text-white text-xl rounded-md font-semibold shadow w-[135px] h-10  cursor-pointer">Quiz</button></a>
-            </div>
-            <div class="mt-14 border border-gray-300 rounded-md shadow-sm shadow-[#c0c0c0] bg-white px-10 w-1/4 h-28 flex flex-col gap-2.5">
+            <div class="mt-14 border border-gray-300 rounded-md shadow-sm shadow-[#c0c0c0] bg-white w-1/4 h-28 flex flex-col gap-2.5" id="homeFlashCArdsNumberContainer">
                 <p class="text-gray-700 font-medium text-[18px] w-full">Total flashcards collection :</p>
-                <p class="text-5xl font-bold text-black mt-5 overflow-y-hidden" id="numberOfCollectionHome"></p>
+                <p class="text-5xl font-bold text-black mt-5 overflow-y-hidden" id="numberOfCollectionHome">0</p>
             </div>
         </main>
 
-        <footer class="flex items-center h-24 w-full flex-col gap-1.5 border-t justify-center border-t-[#c0c0c0]">
+        <footer class="flex items-center h-24 w-full flex-col gap-1.5 border-t justify-center border-t-[#c0c0c0]" id="footer_site">
             <div class="flex justify-center items-center text-xl gap-20">
                 <a href="#">About</a>
                 <a href="#">Contact</a>
@@ -52,5 +50,6 @@
             <p>© 2025 CardDeck . All rights reserved</p>
         </footer>
     </div>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

@@ -2,4 +2,138 @@
     body>div {
         width: 100%;
     }
+
+    /* NavBar Header */
+    #navBar_header {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #navBar_header>div:nth-child(1) {
+        gap: 0;
+    }
+
+    #navBar_header>div:nth-child(1)>svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    #navBar_header>div:nth-child(1)>p {
+        font-size: 16px;
+    }
+
+    #navBar_header>div:nth-child(2) {
+        gap: 5px;
+    }
+
+    #navBar_header>div:nth-child(2)>nav {
+        gap: 5px;
+    }
+
+    /* Footer */
+    #footer_site {
+        gap: 3px;
+    }
+
+    #footer_site>div {
+        gap: 15px;
+        font-size: 18px;
+    }
+
+    /* Home page */
+    .ARPCardF {
+        font-size: 30px;
+    }
+
+    #homeFlashCArdsNumberContainer {
+        width: 45%;
+        height: 120px;
+    }
+
+    #homeFlashCArdsNumberContainer p:nth-child(1) {
+        font-size: 15px;
+        width: 100%;
+    }
+
+    #homeFlashCArdsNumberContainer p:nth-last-child {
+        font-size: 25px;
+    }
+
+    /* Collections page */
+    #collectionsMainHeader {
+        gap: 25px;
+        margin-top: 4px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    #collectionsMainHeader>h1 {
+        font-size: 28px;
+    }
+
+    #collectionsMainHeader>div>div {
+        column-gap: 7px;
+        height: 40px;
+        padding-right: 7px;
+    }
+
+    #collectionsMainHeader>div>button {
+        height: 35px;
+        font-size: 15px;
+    }
+
+    #Collection_See--section>div {
+        grid-template-columns: repeat(2 , 1fr);
+    }
+    /* creation form */
+    #save_collection--Button {
+        width: 25%;
+    }
+
+    /* Collection template */
+    #CollectionTemplateHeader>div>div:nth-child(1)>h1 {
+        font-size: 25px;
+    }
+
+    #nbrCollectionCards {
+        width: 20%;
+    }
+
+    #start_collection--button {
+        width: 20%;
+    }
+
+    #cardsContainer {
+        grid-template-columns: repeat(2 , 1fr);
+    }
+    /* creation form */
+    #save_card--Button {
+        width: 20%;
+    }
+
+    #frontCreatePCards , #backCreatePCards {
+        width: 170px;
+    }
+
+    #frontCreatePCards>div , #backCreatePCards>div {
+        height: 300px;
+    }
+
+    /* Start collection Template */
+    #flipCardStartTemplatePage {
+        width: 55%;
+    }
+
+    #easyMediumHard_Buttons {
+        gap: 20px;
+    }
+
+    #easyMediumHard_Buttons>button {
+        width: 20%;
+    }
+
+    #Continue_Button>button {
+        width: 25%;
+        margin-right: 5px;
+    }
 }

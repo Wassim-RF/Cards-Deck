@@ -7,7 +7,6 @@ const retourCreateCollectiomButton = document.getElementById("retour_create_coll
 CreateCollectionButon.addEventListener("click" , () => {
     CreateCollectionForm.classList.remove("hidden");
     pageContent.classList.add("blur-2xl");
-    console.log("Click");
 });
 
 retourCreateCollectiomButton.addEventListener("click" , () => {
@@ -28,7 +27,8 @@ let collectionCardNumber = 0;
 function creerCollectionDiv() {
     const collectionLinks = document.createElement("a");
     collectionLinks.classList.add("w-full" , "h-[120px]" , "p-1.5" , "border" , "border-[#c0c0c0]" ,  "rounded-2xl" , "shadow-[1px_1px_4px_#c0c0c0]" , "hover:scale-[1.02]" , "cursor-pointer");
-    collectionLinks.setAttribute("href" , "oneCollection.html");
+    collectionLinks.id = CollectionNameUpload.value.toLowerCase().replace(/ /g, "_");
+    // collectionLinks.setAttribute("href" , "oneCollection.html");
     CollectionDivContainer.appendChild(collectionLinks);
 
     const collectionLinkHeader = document.createElement("div");
@@ -59,6 +59,19 @@ function creerCollectionDiv() {
     collectionNumberCards.innerText = collectionCardNumber + " Cards";
     collectionLinkBody.appendChild(collectionNumberCards);
 
+    collectionLinks.addEventListener("click", (e) => {
+        e.preventDefault();
+        try {
+            localStorage.setItem("selectedCollectionId", collectionLinks.id);
+            console.log(collectionLinks.id);
+            setTimeout( () => {
+                window.location.href = "/oneCollection.html";
+            } , 100);
+        } catch {
+            console.log("Le localstorage , travaille pas .");
+            return;
+        }
+    });
 
     CollectionNameUpload.value = "";
     CollectionDescriptionUpload.value = "";
@@ -72,6 +85,19 @@ function loadCollectionsFromLocalStorage() {
     const saved = localStorage.getItem("collectionsHTML");
     if (saved) {
         CollectionDivContainer.innerHTML = saved;
+
+        const collectionLinks = CollectionDivContainer.querySelectorAll("a");
+        collectionLinks.forEach(element => {
+            element.addEventListener("click", (e) => {
+                e.preventDefault();
+                try {
+                    localStorage.setItem("selectedCollectionId", element.id);
+                    window.location.href = "/oneCollection.html";
+                } catch {
+                    console.log("LocalStorage ne fonctionne pas");
+                }
+            });
+        });
     }
 }
 
@@ -90,9 +116,9 @@ function creationCollectionLink() {
         alert("Cette collection est existe");
         return;
     }
-
     collections.push(collection);
     localStorage.setItem("collectionsData", JSON.stringify(collections));
+
 
     creerCollectionDiv();
 
@@ -106,10 +132,9 @@ window.addEventListener("load", loadCollectionsFromLocalStorage);
 
 saveCollectionButton.addEventListener("click", (e) => {
     e.preventDefault();
+
     collectionNumber++;
-    // const numberOfCollectionHome = document.getElementById("numberOfCollectionHome");
-    // numberOfCollectionHome.innerText = collectionNumber++;
-    console.log(collectionNumber);
+    localStorage.setItem("numberOfCollection" , collectionNumber);
 
     creationCollectionLink();
 });
