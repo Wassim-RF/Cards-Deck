@@ -15,6 +15,7 @@ window.addEventListener("load" , () => {
         }
         document.getElementById("front_Card").innerText = thisCollection.cards[currentCard].question;
         document.getElementById("back_Card").innerText = thisCollection.cards[currentCard].reponse;
+        document.getElementById("nbrCollectionCards").innerText = currentCard + 1 + "/" + thisCollection.cards.length;
     } else {
         console.log("Cette collection est n'existe pas");
     }
@@ -35,6 +36,7 @@ document.querySelector("#Continue_Button>button").addEventListener("click" , () 
     const selectedCollectionId = localStorage.getItem("selectedCollectionId");
     let collections = JSON.parse(localStorage.getItem("collectionsData")) || [];
     let thisCollection = collections.find(col => col.id === selectedCollectionId);
+    document.getElementById("nbrCollectionCards").innerText = currentCard + 1 + "/" + thisCollection.cards.length;
     if (currentCard < thisCollection.cards.length) {
         flip_Card.classList.toggle("transform-[rotateY(180deg)]");
         document.getElementById("easyMediumHard_Buttons").style.display = "none";

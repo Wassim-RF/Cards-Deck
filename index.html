@@ -50,6 +50,13 @@
             <p>© 2025 CardDeck . All rights reserved</p>
         </footer>
     </div>
-    <script src="assets/js/script.js"></script>
+    <script>
+        window.addEventListener("load" , () => {
+        let numberOfCollection = localStorage.getItem("numberOfCollection");
+        if (numberOfCollection !== 0) {
+            document.getElementById("numberOfCollectionHome").innerText = numberOfCollection;
+        }
+    });
+    </script>
 </body>
 </html>

@@ -1,0 +1,91 @@
+{
+    "Quizzes": [
+        {
+            "id": "html_quiz",
+            "title": "HTML basics",
+            "difficulty": "easy",
+            "questions": [
+                {
+                    "nbr": 1,
+                    "type": "QCM",
+                    "question": "Quelle tag creer un paragraphe?",
+                    "reponses": [
+                        { "reponse": "<h1></h1>", "correct": false },
+                        { "reponse": "<body></body>", "correct": false },
+                        { "reponse": "<p></p>", "correct": true },
+                        { "reponse": "<paragraphe></paragraphe>", "correct": false }
+                    ]
+                },
+                {
+                    "nbr": 2,
+                    "type": "True_False",
+                    "question": "<h1>...<h6> y a aucune similitude entre eux?",
+                    "reponses": false
+                },
+                {
+                    "nbr": 3,
+                    "type": "True_False",
+                    "question": "HTML est Hyper Text Markup Language?",
+                    "reponses": true
+                },
+                {
+                    "nbr": 4,
+                    "type": "text",
+                    "question": "Comment en peut creer un link en HTML ?",
+                    "reponses": ["<a></a>", "<a>"]
+                },
+                {
+                    "nbr": 5,
+                    "type": "QCM",
+                    "question": "Quelle balise est utilisée pour insérer une image ?",
+                    "reponses": [
+                        { "reponse": "<image>", "correct": false },
+                        { "reponse": "<img>", "correct": true },
+                        { "reponse": "<src>", "correct": false },
+                        { "reponse": "<picture>", "correct": false }
+                    ]
+                },
+                {
+                    "nbr": 6,
+                    "type": "QCM",
+                    "question": "Quel attribut est utilisé pour définir l’URL d’un lien ?",
+                    "reponses": [
+                        { "reponse": "src", "correct": false },
+                        { "reponse": "href", "correct": true },
+                        { "reponse": "link", "correct": false },
+                        { "reponse": "url", "correct": false }
+                    ]
+                },
+                {
+                    "nbr": 7,
+                    "type": "True_False",
+                    "question": "La balise <br> permet de créer un saut de ligne.",
+                    "reponses": true
+                },
+                {
+                    "nbr": 8,
+                    "type": "QCM",
+                    "question": "Quelle est la bonne structure d’un document HTML ?",
+                    "reponses": [
+                        { "reponse": "<html><head><title></title></head><body></body></html>", "correct": true },
+                        { "reponse": "<head><body><html></html></body></head>", "correct": false },
+                        { "reponse": "<html><body><head></head></body></html>", "correct": false },
+                        { "reponse": "<html><body></body></html>", "correct": false }
+                    ]
+                },
+                {
+                    "nbr": 9,
+                    "type": "True_False",
+                    "question": "Les balises HTML ne sont pas sensibles à la casse (majuscule/minuscule).",
+                    "reponses": true
+                },
+                {
+                    "nbr": 10,
+                    "type": "text",
+                    "question": "Quelle balise est utilisée pour créer une liste non ordonnée ?",
+                    "reponses": ["<ul>", "<ul></ul>"]
+                }
+            ]
+        }
+    ]
+}
