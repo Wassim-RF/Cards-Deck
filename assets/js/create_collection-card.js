@@ -28,7 +28,7 @@ function creerCollectionDiv() {
     const collectionLinks = document.createElement("a");
     collectionLinks.classList.add("w-full" , "h-[120px]" , "p-1.5" , "border" , "border-[#c0c0c0]" ,  "rounded-2xl" , "shadow-[1px_1px_4px_#c0c0c0]" , "hover:scale-[1.02]" , "cursor-pointer");
     collectionLinks.id = CollectionNameUpload.value.toLowerCase().replace(/ /g, "_");
-    // collectionLinks.setAttribute("href" , "oneCollection.html");
+    collectionLinks.setAttribute("href" , "oneCollection.html");
     CollectionDivContainer.appendChild(collectionLinks);
 
     const collectionLinkHeader = document.createElement("div");
