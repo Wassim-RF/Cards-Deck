@@ -46,6 +46,7 @@ document.querySelector("#Continue_Button>button").addEventListener("click" , () 
     } else {
         console.log("Stop");
         window.location.href = "/oneCollection.html";
+        document.querySelector("#Continue_Button>button").innerText = "Exit";
     }
 });
 

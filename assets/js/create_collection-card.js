@@ -21,7 +21,8 @@ const CollectionNameUpload = document.getElementById("Collection_Name");
 const CollectionDescriptionUpload = document.getElementById("Collection_description");
 const CollectionDivContainer = document.getElementById("Collection_div--container"); // div de container collection
 const saveCollectionButton = document.getElementById("save_collection--Button"); // save collection buton
-let collectionNumber = 0;
+localStorage.setItem("numberOfCollection" , 0);
+let collectionNumber = localStorage.getItem("numberOfCollection");
 let collectionCardNumber = 0;
 
 function creerCollectionDiv() {
@@ -86,7 +87,7 @@ function loadCollectionsFromLocalStorage() {
     if (saved) {
         CollectionDivContainer.innerHTML = saved;
 
-        const collectionLinks = CollectionDivContainer.querySelectorAll("a");
+        const collectionLinks = CollectionDivContainer.querySelectorAll("#Collection_div--container>a");
         collectionLinks.forEach(element => {
             element.addEventListener("click", (e) => {
                 e.preventDefault();
@@ -119,6 +120,9 @@ function creationCollectionLink() {
     collections.push(collection);
     localStorage.setItem("collectionsData", JSON.stringify(collections));
 
+    collectionNumber++;
+    localStorage.setItem("numberOfCollection" , collectionNumber);
+
 
     creerCollectionDiv();
 
@@ -132,9 +136,6 @@ window.addEventListener("load", loadCollectionsFromLocalStorage);
 
 saveCollectionButton.addEventListener("click", (e) => {
     e.preventDefault();
-
-    collectionNumber++;
-    localStorage.setItem("numberOfCollection" , collectionNumber);
 
     creationCollectionLink();
 });

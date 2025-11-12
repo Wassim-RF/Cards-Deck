@@ -3,7 +3,10 @@
         {
             "id": "html_quiz",
             "title": "HTML basics",
+            "discription": "A collection for learn the tags of html",
             "difficulty": "easy",
+            "last_score": "0%",
+            "date_creation": "11/11/2025",
             "questions": [
                 {
                     "nbr": 1,
