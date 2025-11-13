@@ -44,55 +44,47 @@
                     </div>
                 </div>
             </header>
-            <div class="min-h-screen flex justify-center items-center flex-col">
+            <div class="min-h-screen flex justify-center items-center flex-col" id="Section_Question_Reponce">
                 <section class="hidden flex-col gap-10 w-[70%]" id="QCM_Section">
-                    <h1 class="text-center text-2xl font-medium">Question ?</h1>
-                    <div class="grid grid-cols-2 gap-16 w-full">
-                        <button class="bg-[#c0c0c0] w-[90%] h-10 cursor-pointer rounded-md hover:scale-[1.01] hover:shadow-[1px_1px_5px_#c0c0c0]">
+                    <h1 class="text-center text-2xl font-medium" id="quizQcmQuestion"></h1>
+                    <div class="grid grid-cols-2 gap-16 w-full" id="">
+                        <button class="bg-[#c0c0c0] w-[90%] h-10 cursor-pointer rounded-md hover:scale-[1.01] hover:shadow-[1px_1px_5px_#c0c0c0]" id="quizQcmReponse1">
                             Reponce 1
                         </button>
-                        <button class="bg-[#c0c0c0] w-[90%] h-10 cursor-pointer rounded-md hover:scale-[1.01] hover:shadow-[1px_1px_5px_#c0c0c0]">
+                        <button class="bg-[#c0c0c0] w-[90%] h-10 cursor-pointer rounded-md hover:scale-[1.01] hover:shadow-[1px_1px_5px_#c0c0c0]" id="quizQcmReponse2">
                             Reponce 1
                         </button>
-                        <button class="bg-[#c0c0c0] w-[90%] h-10 cursor-pointer rounded-md hover:scale-[1.01] hover:shadow-[1px_1px_5px_#c0c0c0]">
+                        <button class="bg-[#c0c0c0] w-[90%] h-10 cursor-pointer rounded-md hover:scale-[1.01] hover:shadow-[1px_1px_5px_#c0c0c0]" id="quizQcmReponse3">
                             Reponce 1
                         </button>
-                        <button class="bg-[#c0c0c0] w-[90%] h-10 cursor-pointer rounded-md hover:scale-[1.01] hover:shadow-[1px_1px_5px_#c0c0c0]">
+                        <button class="bg-[#c0c0c0] w-[90%] h-10 cursor-pointer rounded-md hover:scale-[1.01] hover:shadow-[1px_1px_5px_#c0c0c0]" id="quizQcmReponse4">
                             Reponce 1
                         </button>
-                    </div>
-                    <p class="text-center text-[18px] font-medium">Votre reponse est vrai !</p>
-                    <div class="w-full flex justify-end">
-                        <button class="bg-[#F5A623] hover:bg-[#D58E1A] w-[15%] text-white text-2xl font-medium cursor-pointer rounded-md">Continue</button>
                     </div>
                 </section>
                 <section class="hidden flex-col gap-10 w-[70%]" id="True_False_Section">
-                    <h1 class="text-center text-2xl font-medium">Question ?</h1>
-                    <div class="grid grid-cols-2 gap-16 w-full">
-                        <button class="bg-[#c0c0c0] w-[90%] h-40 cursor-pointer rounded-md hover:scale-[1.01] hover:shadow-[1px_1px_5px_#c0c0c0]">
+                    <h1 class="text-center text-2xl font-medium" id="quizTFQuestion">Question ?</h1>
+                    <div class="grid grid-cols-2 gap-16 w-full" >
+                        <button class="bg-[#c0c0c0] w-[90%] h-40 cursor-pointer rounded-md hover:scale-[1.01] hover:shadow-[1px_1px_5px_#c0c0c0]" id="trueBtn">
                             Vrai
                         </button>
-                        <button class="bg-[#c0c0c0] w-[90%] h-40 cursor-pointer rounded-md hover:scale-[1.01] hover:shadow-[1px_1px_5px_#c0c0c0]">
+                        <button class="bg-[#c0c0c0] w-[90%] h-40 cursor-pointer rounded-md hover:scale-[1.01] hover:shadow-[1px_1px_5px_#c0c0c0]" id="falseBtn">
                             Faux
                         </button>
                     </div>
-                    <p class="text-center text-[18px] font-medium">Votre reponse est vrai !</p>
-                    <div class="w-full flex justify-end">
-                        <button class="bg-[#F5A623] hover:bg-[#D58E1A] w-[15%] text-white text-2xl font-medium cursor-pointer rounded-md">Continue</button>
-                    </div>
                 </section>
                 <section class="hidden flex-col gap-10 w-[70%]" id="text_Section">
-                    <h1 class="text-center text-2xl font-medium">Question ?</h1>
+                    <h1 class="text-center text-2xl font-medium" id="quizTextQuestion"></h1>
                     <div class="w-full">
                         <div class="w-full h-40 border border-[#F5A623] flex items-center pl-5 rounded-2xl shadow-[1px_1px_5px_#c0c0c0">
-                            <input type="text" placeholder="Entrer votre reponse ici..." class="outline-0 w-full">
+                            <input type="text" placeholder="Entrer votre reponse ici..." class="outline-0 w-full"
                         </div>
                     </div>
-                    <p class="text-center text-[18px] font-medium">Votre reponse est vrai !</p>
-                    <div class="w-full flex justify-end">
-                        <button class="bg-[#F5A623] hover:bg-[#D58E1A] w-[15%] text-white text-2xl font-medium cursor-pointer rounded-md">Continue</button>
-                    </div>
                 </section>
+                <p class="text-center text-[18px] font-medium mt-2.5 hidden" id="isCorrectText"></p>
+                <div class="w-full justify-end hidden" id="continueQUestionQuiz">
+                    <button class="bg-[#F5A623] hover:bg-[#D58E1A] w-[15%] text-white text-2xl font-medium cursor-pointer rounded-md">Continue</button>
+                </div>
             </div>
         </main>
 
@@ -106,5 +98,6 @@
             <p>© 2025 CardDeck . All rights reserved</p>
         </footer>
     </div>
+    <script src="assets/js/startQuiz.js"></script>
 </body>
 </html>

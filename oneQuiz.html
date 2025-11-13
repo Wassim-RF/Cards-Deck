@@ -33,16 +33,16 @@
                     <img src="assets/image/html.png" alt="HTML basics" class="h-[200px]">
                     <div class="w-full flex flex-col gap-10 content-between ml-5">
                         <div class="flex justify-between items-center mt-1.5 w-full">
-                            <h1 class="text-3xl font-semibold" id="collectionTitle">HTML basics</h1>
+                            <h1 class="text-3xl font-semibold" id="quizTitle"></h1>
                             <p class="cursor-pointer">...</p>
                         </div>
-                        <p class="text-[15px]" id="collectionDiscription">A collection for learn the tags of html</p>
+                        <p class="text-[15px]" id="quizDiscription"></p>
                         <div class="flex items-center justify-between mt-5">
                             <div class="flex items-center gap-2.5 w-1/2">
-                                <p class="bg-[#c0c0c0] w-1/3 text-center rounded-2xl" id="nbrCollectionCards">10 Question</p>
-                                <p class="border border-[#F5A623] text-center w-1/3 rounded-2xl text-[#F5A623]">Easy</p>
+                                <p class="bg-[#c0c0c0] w-1/3 text-center rounded-2xl" id="nbrQuizQuestion"></p>
+                                <p class="border border-[#F5A623] text-center w-1/3 rounded-2xl text-[#F5A623]" id="quizDifficulte"></p>
                             </div>
-                            <button class="bg-[#F5A623] hover:bg-[#D58E1A] text-white font-medium text-2xl rounded-md w-1/12 cursor-pointer" id="start_collection--button">Start</button>
+                            <button class="bg-[#F5A623] hover:bg-[#D58E1A] text-white font-medium text-2xl rounded-md w-1/12 cursor-pointer" id="start_Quiz--button1">Start</button>
                         </div>
                     </div>
                 </div>
@@ -58,13 +58,13 @@
                     <div>
                         <div class="mt-14 border border-gray-300 rounded-md shadow-sm shadow-[#c0c0c0] bg-white h-28 flex flex-col justify-center items-center" id="homeFlashCArdsNumberContainer">
                             <p class="text-gray-700 font-medium text-[18px] w-full text-center">💯 Your last score :</p>
-                            <p class="text-5xl font-bold text-black mt-5 overflow-y-hidden">0%</p>
+                            <p class="text-5xl font-bold text-black mt-5 overflow-y-hidden" id="lastScore"></p>
                         </div>
                     </div>
                     <div>
                         <div class="mt-14 border border-gray-300 rounded-md shadow-sm shadow-[#c0c0c0] bg-white h-28 flex flex-col justify-center items-center" id="homeFlashCArdsNumberContainer">
                             <p class="text-gray-700 font-medium text-[18px] w-full text-center">🗓️ Date of creation :</p>
-                            <p class="text-4xl font-bold text-black mt-5 overflow-y-hidden">11/11/2025</p>
+                            <p class="text-4xl font-bold text-black mt-5 overflow-y-hidden" id="dateOfCreationQuiz">11/11/2025</p>
                         </div>
                     </div>
                 </div>
@@ -102,7 +102,7 @@
                     </div>
                 </div>
                 <div>
-                    <button class="bg-[#F5A623] hover:bg-[#D58E1A] text-white font-medium text-2xl rounded-md w-[100px] cursor-pointer" id="start_collection--button">Start</button>
+                    <button class="bg-[#F5A623] hover:bg-[#D58E1A] text-white font-medium text-2xl rounded-md w-[100px] cursor-pointer" id="start_Quiz--button2">Start</button>
                 </div>
             </div>
         </main>
@@ -117,5 +117,6 @@
             <p>© 2025 CardDeck . All rights reserved</p>
         </footer>
     </div>
+    <script src="assets/js/quiz-template.js"></script>
 </body>
 </html>

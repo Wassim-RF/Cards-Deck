@@ -1,10 +1,10 @@
 {
     "Quizzes": [
         {
-            "id": "html_quiz",
+            "id": "html_basics",
             "title": "HTML basics",
             "discription": "A collection for learn the tags of html",
-            "difficulty": "easy",
+            "difficulty": "Easy",
             "last_score": "0%",
             "date_creation": "11/11/2025",
             "questions": [
@@ -23,22 +23,16 @@
                     "nbr": 2,
                     "type": "True_False",
                     "question": "<h1>...<h6> y a aucune similitude entre eux?",
-                    "reponses": false
+                    "correct": false
                 },
                 {
                     "nbr": 3,
                     "type": "True_False",
                     "question": "HTML est Hyper Text Markup Language?",
-                    "reponses": true
+                    "correct": true
                 },
                 {
                     "nbr": 4,
-                    "type": "text",
-                    "question": "Comment en peut creer un link en HTML ?",
-                    "reponses": ["<a></a>", "<a>"]
-                },
-                {
-                    "nbr": 5,
                     "type": "QCM",
                     "question": "Quelle balise est utilisée pour insérer une image ?",
                     "reponses": [
@@ -49,7 +43,7 @@
                     ]
                 },
                 {
-                    "nbr": 6,
+                    "nbr": 5,
                     "type": "QCM",
                     "question": "Quel attribut est utilisé pour définir l’URL d’un lien ?",
                     "reponses": [
@@ -60,10 +54,10 @@
                     ]
                 },
                 {
-                    "nbr": 7,
+                    "nbr": 6,
                     "type": "True_False",
                     "question": "La balise <br> permet de créer un saut de ligne.",
-                    "reponses": true
+                    "correct": true
                 },
                 {
                     "nbr": 8,
@@ -77,16 +71,10 @@
                     ]
                 },
                 {
-                    "nbr": 9,
+                    "nbr": 8,
                     "type": "True_False",
                     "question": "Les balises HTML ne sont pas sensibles à la casse (majuscule/minuscule).",
-                    "reponses": true
-                },
-                {
-                    "nbr": 10,
-                    "type": "text",
-                    "question": "Quelle balise est utilisée pour créer une liste non ordonnée ?",
-                    "reponses": ["<ul>", "<ul></ul>"]
+                    "correct": true
                 }
             ]
         }
